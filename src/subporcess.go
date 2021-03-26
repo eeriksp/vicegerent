@@ -16,4 +16,5 @@ func ExecuteCommand(response http.ResponseWriter, workDir string, commands ...st
 	if err != nil {
 		fmt.Fprintf(response, "ERROR: %s", err)
 	}
+	fmt.Fprintln(response)
 }

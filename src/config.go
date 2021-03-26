@@ -1,7 +1,7 @@
 package main
 
 import (
-	"encoding/json"
+	"gopkg.in/yaml.v3"
 	"io/ioutil"
 )
 
@@ -22,7 +22,7 @@ func (task Task) fullUrl() string {
 
 func loadConfiguration() Config {
 	config := Config{}
-	err := json.Unmarshal(loadConfigurationFromFile(), &config)
+	err := yaml.Unmarshal(loadConfigurationFromFile(), &config)
 	panicIf(err)
 	return config
 }
