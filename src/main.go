@@ -6,14 +6,6 @@ import (
 	"net/http"
 )
 
-func handler(response http.ResponseWriter, r *http.Request) {
-	commands := loadConfiguration().Tasks[0].Commands
-	for _, command := range commands {
-		output, err := ExecuteCommand(command...)
-		AppendCommandOutputToResponse(response, command, output, err)
-	}
-}
-
 func createHandler(task Task) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
 		for _, command := range task.Commands {
