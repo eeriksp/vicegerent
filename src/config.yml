@@ -1,6 +1,7 @@
 address: ':8080'
 tasks:
-  - url: versions
+  - name: 'Show software versions'
+    url: 'versions'
     workDir: '/home/sherab'
     commands:
       - [ 'go', 'version' ]

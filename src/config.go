@@ -11,6 +11,7 @@ type Config struct {
 }
 
 type Task struct {
+	Name     string
 	Url      string
 	WorkDir  string
 	Commands [][]string
