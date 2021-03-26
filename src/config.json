@@ -1,8 +1,14 @@
 {
-  "port": 8080,
-  "Commands": [
-    ["go", "version"],
-    ["python", "--version"],
-    ["foobar", "--version"]
+  "address": ":8080",
+  "tasks": [
+    {
+      "url": "versions",
+      "workDir": "/home/sherab",
+      "commands": [
+        ["go", "version"],
+        ["python", "--version"],
+        ["foobar", "--version"]
+      ]
+    }
   ]
 }
