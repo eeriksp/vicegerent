@@ -15,8 +15,7 @@ func tryFlush(response http.ResponseWriter) {
 func createHandler(task Task) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
 		fmt.Fprintf(response, `Started task "%s"`, task.Name)
-		fmt.Fprintln(response, "\n")
-		fmt.Fprintln(response)
+		fmt.Fprintln(response, "\n\n")
 		for _, command := range task.Commands {
 			ExecuteCommand(response, task.WorkDir, command...)
 			tryFlush(response)
