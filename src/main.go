@@ -6,11 +6,17 @@ import (
 	"net/http"
 )
 
+func tryFlush(response http.ResponseWriter) {
+	if f, ok := response.(http.Flusher); ok {
+		f.Flush()
+	}
+}
+
 func createHandler(task Task) func(http.ResponseWriter, *http.Request) {
 	return func(response http.ResponseWriter, request *http.Request) {
 		for _, command := range task.Commands {
-			output, err := ExecuteCommand(command...)
-			AppendCommandOutputToResponse(response, command, output, err)
+			ExecuteCommand(response, task.WorkDir, command...)
+			tryFlush(response)
 		}
 	}
 }
