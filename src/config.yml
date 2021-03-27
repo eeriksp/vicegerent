@@ -7,3 +7,11 @@ tasks:
       - [ 'go', 'version' ]
       - [ 'python', '--version' ]
       - [ 'foobar', '--version' ]
+  - name: 'Update the application'
+    url: 'update-uplication'
+    workDir: '/home/sherab/docker-applications'
+    commands:
+      - [ 'pwd' ]
+      - [ 'docker-compose', 'down' ]
+      - [ 'docker-compose', 'pull' ]
+      - [ 'docker-compose', 'up' ]

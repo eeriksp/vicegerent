@@ -15,7 +15,7 @@ type Config struct {
 type Task struct {
 	Name     string // a human readable name of the task
 	Url      string // urlPrefix + Url as constructed by `task.fullUrl()` will be the URL the task can be invoked by
-	WorkDir  string // the working directory for all the commands
+	WorkDir  string `yaml:"workDir"`// the working directory for all the commands
 	Commands [][]string
 }
 
