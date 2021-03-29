@@ -1,0 +1,25 @@
+name: vicegerent
+base: core20
+version: git
+summary: Run predefined sets of commands in the server invoked by an HTTP call.
+description: |
+  Vicegerent is a small Go application which helps you to run predefined sets of commands
+  in the server invoked by an HTTP call.
+
+  The original intent behind the project was
+  to trigger the update commands for Docker containers from a CI/CD script
+  without giving SSH access to the server.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: classic # use 'strict' once you have the right plugs and slots
+
+parts:
+  vicegerent:
+    plugin: go
+#    go-importpath: github.com/eeriksp/vicegerent
+    source: ./src
+#    source-type: git
+apps:
+  vicegerent:
+    command: 'bin/vicegerent'
+#    daemon: simple
