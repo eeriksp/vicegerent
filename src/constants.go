@@ -1,6 +1,6 @@
 package main
 
 const (
-	configFilePath = "./config.yml" // "/etc/vicegerent/config.yml"
+	configFilePath = "/etc/vicegerent/config.yml"
 	urlPrefix      = "/task/"
 )
