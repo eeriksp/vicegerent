@@ -11,15 +11,13 @@ description: |
   without giving SSH access to the server.
 
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: classic # use 'strict' once you have the right plugs and slots
+confinement: classic
 
 parts:
   vicegerent:
     plugin: go
-#    go-importpath: github.com/eeriksp/vicegerent
     source: ./src
-#    source-type: git
 apps:
-  vicegerent:
+  daemon:
     command: 'bin/vicegerent'
-#    daemon: simple
+    daemon: simple
