@@ -95,3 +95,13 @@ Python 3.8.5
 
 Task finished.
 ```
+
+## Platform support
+
+Tested on Ubuntu 20.
+
+If you can confirm that it is (not) working on some other platform, please let us know by opening an issue or submitting a pull request.
+
+## Contributing
+
+Contribution is welcome. Please document your changes in `CHANGELOG.md` when submitting a pull request.
