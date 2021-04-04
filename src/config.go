@@ -16,9 +16,10 @@ type Task struct {
 	Name     string // a human readable name of the task
 	Url      string // urlPrefix + Url as constructed by `task.fullUrl()` will be the URL the task can be invoked by
 	WorkDir  string `yaml:"workDir"`// the working directory for all the commands
-	Commands [][]string
+	Commands [][]string // the commands which the Task should execute
 }
 
+// fullUrl constructs the URL the given task can be invoked by.
 func (task Task) fullUrl() string {
 	return urlPrefix + task.Url
 }
