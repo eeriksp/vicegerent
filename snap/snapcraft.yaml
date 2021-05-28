@@ -6,11 +6,10 @@ description: |
   Vicegerent is a small Go application which helps you to run predefined sets of commands
   in the server invoked by an HTTP call.
 
-  The original intent behind the project was
-  to trigger the update commands for Docker containers from a CI/CD script
+  An example usecase would be updateing Docker containers from a CI/CD script
   without giving SSH access to the server.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
+grade: stable
 confinement: classic
 
 parts:
