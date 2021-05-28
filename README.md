@@ -1,5 +1,9 @@
 # Vicegerent
 
+<a href="https://snapcraft.io/vicegerent">
+  <img alt="vicegerent" src="https://snapcraft.io/vicegerent/badge.svg" />
+</a>
+
 <img src="https://raw.githubusercontent.com/eeriksp/vicegerent/master/brand/logo.png" alt="Vicegerent logo" height="400px">
 
 Vicegerent is a small Go application which helps you to run predefined sets of commands in the server invoked by an HTTP call.
