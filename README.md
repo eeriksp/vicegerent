@@ -32,7 +32,29 @@ tasks:
 
 ### Installing Vicegerent
 
-#### Option 1: regular Go project
+#### Option 1: Install as a snap package
+
+<a href="https://snapcraft.io/vicegerent">
+  <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />
+</a>
+
+1. Install the snap
+
+   `sudo snap install vicegerent --classic`
+
+   The demon will start automatically, although I won't see any output.
+
+2. If you want to double-check that the demon started, use
+
+   `sudo snap services vicegerent`
+
+   You should see a line with service `vicegerent.daemon`
+
+3. If you make any changes to the configuration file, restart the daemon with
+
+   `sudo snap restart vicegerent`
+
+#### Option 2: regular Go project
 
 1. Download the source:
    
@@ -54,28 +76,6 @@ tasks:
 3. To run the process in the background, use
 
    `nohup go run . &`
-
-#### Option 2: Install as a snap package
-
-Install the application with
-
-**Not available yet**: snap is waiting for an approval (necessary for snaps with `classic` confinement).
-
-1. Install the snap
-
-   `sudo snap install vicegerent --classic`
-
-   The demon will start automatically, although I won't see any output.
-
-2. If you want to double-check that the demon started, use
-
-   `sudo snap services vicegerent`
-
-   You should see a line with service `vicegerent.daemon`
-
-3. If you make any changes to the configuration file, restart the daemon with
-
-   `sudo snap restart vicegerent`
 
 
 
