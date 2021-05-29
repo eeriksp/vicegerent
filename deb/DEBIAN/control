@@ -1,8 +1,0 @@
-Package: vicegerent
-Version: 1.0
-Section: custom
-Priority: optional
-Architecture: all
-Essential: no
-Maintainer: https://github.com/eeriksp
-Description: Run predefined sets of commands in the server invoked by an HTTP call.
