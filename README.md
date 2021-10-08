@@ -46,7 +46,7 @@ tasks:
 
    `sudo snap install vicegerent --classic`
 
-   The demon will start automatically, although I won't see any output.
+   The demon will start automatically, although you won't see any output.
 
 2. If you want to double-check that the demon started, use
 
